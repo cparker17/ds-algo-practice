@@ -8,7 +8,12 @@ public class Main {
 
         System.out.println(myLinkedList.head.value + " " + myLinkedList.head.next.value + " "
                 + myLinkedList.head.next.next.value);
-        System.out.println(myLinkedList.removeLast().value);
-        System.out.println(myLinkedList.removeLast().value);
+//        System.out.println(myLinkedList.removeLast().value);
+//        System.out.println(myLinkedList.removeLast().value);
+
+        System.out.println(myLinkedList.get(0).value);
+        System.out.println(myLinkedList.get(1).value);
+        System.out.println(myLinkedList.get(2).value);
+        //System.out.println(myLinkedList.get(4).value);
     }
 }

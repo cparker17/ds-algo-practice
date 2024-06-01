@@ -54,10 +54,13 @@ public class LinkedList {
             tail = null;
             return currentNode;
         } else {
-            while (currentNode.next != tail) {
+            Node temp = null;
+            while (currentNode.next != null) {
+                temp = currentNode;
                 currentNode = currentNode.next;
             }
-            tail = currentNode;
+            tail = temp;
+            tail.next = null;
             length--;
             return currentNode;
         }
@@ -71,5 +74,18 @@ public class LinkedList {
             head = head.next;
             return currentNode;
         }
+    }
+
+    public Node get(int index) {
+        if (index < 0 || index >= length) {
+            return null;
+        }
+        Node currentNode = head;
+        int count = 0;
+        while (count != index) {
+            currentNode = currentNode.next;
+            count++;
+        }
+        return currentNode;
     }
 }
