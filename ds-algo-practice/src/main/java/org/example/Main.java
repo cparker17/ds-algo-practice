@@ -112,4 +112,8 @@ public class Main {
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
     }
+
+    // ******BINARY SEARCH TREE TESTS*******
+    BinarySearchTree num = new BinarySearchTree();
+    n
 }
