@@ -58,7 +58,20 @@ public class Main {
         System.out.println("Value at index 2: " + myDoublyLinkedList.get(2).value);
         System.out.println("\n");
 
+        //INSERT METHOD TEST
+        myDoublyLinkedList.printValues();
+        myDoublyLinkedList.insert(2, 2);
+        System.out.println("\n");
+        myDoublyLinkedList.printValues();
+        System.out.println("\n");
+        myDoublyLinkedList.insert(0, -1);
+        myDoublyLinkedList.insert(5, 4);
+        myDoublyLinkedList.printValues();
 
+        //REMOVE METHOD TEST
+        myDoublyLinkedList.remove(3);
+        System.out.println("\n");
+        myDoublyLinkedList.printValues();
 
     }
 }

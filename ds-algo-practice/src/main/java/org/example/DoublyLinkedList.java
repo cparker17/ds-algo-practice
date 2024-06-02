@@ -106,10 +106,42 @@ public class DoublyLinkedList {
     }
 
     public boolean insert(int index, int value) {
-        if (index < 0 || index >= length) {
+        if (index < 0 || index > length) {
             return false;
         }
-        
+        if (index == 0) {
+            prepend(value);
+            return true;
+        }
+        if (index == length) {
+            append(value);
+            return true;
+        }
+        Node newNode = new Node(value);
+        Node previousNode = head;
+        for (int i = 1; i < index; i++) {
+            previousNode = previousNode.next;
+        }
+        Node nextNode = previousNode.next;
+        previousNode.next = newNode;
+        newNode.previous = previousNode;
+        newNode.next = nextNode;
+        nextNode.previous = newNode;
+        length++;
+        return true;
     }
 
+    public Node remove(int index) {
+        if (index < 0 || index > length) {
+            return null;
+        }
+        Node nodeToReturn = head;
+        for (int i = 0; i < index; i++) {
+            nodeToReturn = nodeToReturn.next;
+        }
+        nodeToReturn.previous.next = nodeToReturn.next;
+        nodeToReturn.next.previous = nodeToReturn.previous;
+        length--;
+        return nodeToReturn;
+    }
 }
