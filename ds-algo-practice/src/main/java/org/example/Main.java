@@ -49,5 +49,16 @@ public class Main {
         System.out.println("Value of remove node: " + myDoublyLinkedList.removeLast().value);
         System.out.println("Value of remove node: " + myDoublyLinkedList.removeLast().value);
 
+        myDoublyLinkedList.append(3);
+        System.out.print("\nCurrent values: ");
+        myDoublyLinkedList.printValues();
+        System.out.println("\n");
+        System.out.println("Value at index 0: " + myDoublyLinkedList.get(0).value);
+        System.out.println("Value at index 1: " + myDoublyLinkedList.get(1).value);
+        System.out.println("Value at index 2: " + myDoublyLinkedList.get(2).value);
+        System.out.println("\n");
+
+
+
     }
 }
