@@ -1,7 +1,6 @@
 package org.example;
 
 public class LinkedList {
-    int value;
     Node head;
     Node tail;
     int length;
