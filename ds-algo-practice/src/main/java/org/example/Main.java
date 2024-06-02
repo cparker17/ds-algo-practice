@@ -101,5 +101,15 @@ public class Main {
         System.out.println(myStack.pop());
         System.out.println(myStack.pop());
         System.out.println(myStack.pop());
+
+        // *******QUEUE TESTS***********
+
+        Queue myQueue = new Queue();
+        myQueue.enqueue(1);
+        myQueue.enqueue(2);
+        myQueue.enqueue(3);
+        System.out.println(myQueue.dequeue());
+        System.out.println(myQueue.dequeue());
+        System.out.println(myQueue.dequeue());
     }
 }
