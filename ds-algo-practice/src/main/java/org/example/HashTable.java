@@ -42,4 +42,50 @@ public class HashTable {
         }
         return true;
     }
+
+    public boolean search(String key, int value) {
+        int index = hash(key);
+        if (dataMap[index] == null) {
+            return false;
+        } else {
+            Node currentNode = dataMap[index];
+            while (currentNode != null) {
+                if (currentNode.key.equals(key) && currentNode.value == value) {
+                    return true;
+                }
+                currentNode = currentNode.next;
+            }
+        }
+        return false;
+    }
+
+    public boolean delete(String key, int value) {
+        int index = hash(key);
+        if (dataMap[index] == null) {
+            return false;
+        } else {
+            Node currentNode = dataMap[index];
+            while (currentNode != null) {
+                if (currentNode.key.equals(key) && currentNode.value == value) {
+                    dataMap[index] = currentNode.next;
+                    return true;
+                } else {
+                    currentNode = currentNode.next;
+                }
+            }
+        }
+        return false;
+    }
+
+    public void printTableValues() {
+        for (int i = 0; i < size; i++) {
+            System.out.print(i + ": ");
+            Node currentNode = dataMap[i];
+            while (currentNode != null) {
+                System.out.print(currentNode.value + " ");
+                currentNode = currentNode.next;
+            }
+            System.out.println();
+        }
+    }
 }

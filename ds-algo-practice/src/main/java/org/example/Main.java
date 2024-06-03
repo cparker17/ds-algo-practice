@@ -120,5 +120,26 @@ public class Main {
 
         HashTable hashTable = new HashTable();
 
+        //INSERT METHOD TEST
+        hashTable.insert("desk", 20);
+        hashTable.insert("computer", 5);
+        hashTable.insert("lamp", 2);
+        hashTable.insert("picture", 10);
+        hashTable.insert("bookcase", 100);
+        hashTable.insert("rug", 35);
+        hashTable.printTableValues();
+
+        System.out.println();
+
+        //SEARCH METHOD TEST
+        System.out.println(hashTable.search("desk", 20));
+        System.out.println(hashTable.search("lamp", 2));
+        System.out.println(hashTable.search("chair", 75));
+
+        //DELETE METHOD TEST
+        hashTable.delete("desk", 20);
+        hashTable.delete("picture", 10);
+        hashTable.delete("chair", 75);
+        hashTable.printTableValues();
     }
 }
