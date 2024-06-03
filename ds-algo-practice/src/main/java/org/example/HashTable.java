@@ -27,4 +27,19 @@ public class HashTable {
         }
         return hash;
     }
+
+    public boolean insert(String key, int value) {
+        Node newNode = new Node(key, value);
+        int index = hash(key);
+        if (dataMap[index] == null) {
+            dataMap[index] = newNode;
+        } else {
+            Node currentNode = dataMap[index];
+            while (currentNode.next != null) {
+                currentNode = currentNode.next;
+            }
+            currentNode.next = newNode;
+        }
+        return true;
+    }
 }

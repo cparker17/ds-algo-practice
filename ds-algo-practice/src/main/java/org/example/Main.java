@@ -1,5 +1,7 @@
 package org.example;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -111,9 +113,12 @@ public class Main {
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
         System.out.println(myQueue.dequeue());
-    }
 
-    // ******BINARY SEARCH TREE TESTS*******
-    BinarySearchTree num = new BinarySearchTree();
-    n
+        // *********HASH TABLE TESTS**********
+
+        System.out.println();
+
+        HashTable hashTable = new HashTable();
+
+    }
 }
