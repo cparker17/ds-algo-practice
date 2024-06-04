@@ -6,9 +6,10 @@ import java.util.List;
 public class Heap {
     private List<Integer> heap;
 
-    public Heap(){
+    public Heap() {
         this.heap = new ArrayList<>();
     }
+
     public void insert(int value) {
         heap.add(value);
         int current = heap.size() - 1;
@@ -49,7 +50,7 @@ public class Heap {
 
         return maxValue;
     }
-
+    
     private void sinkDown(int index) {
         int maxIndex = index;
         while (true) {
